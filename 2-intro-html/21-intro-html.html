@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>什么是 HTML</title>
+
+    <style>
+        html {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;
+        }
+
+        body {
+            width: 960px;
+            margin: 0 auto;
+            border: 1px solid white;
+            background-color: antiquewhite;
+        }
+
+        h1 {
+            text-align: center;
+            text-shadow: 1px 1px 1px black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>什么是 HTML</h1>
+
+    <h2>HTML 定义</h2>
+    <p>HTML (HyperText Markup Language) 不是一种编程语言;它是一种标记语言，用于告诉您的浏览器如何构造您访问的网页。它可以像 Web 开发人员希望的那样复杂或简单。 HTML 由一系列的元素组成, 您可以使用它来封装，包装或标记内容的不同部分，使其以某种方式显示，或以某种方式执行。封闭tags 可以使一点内容成为超链接以链接到 Web 上的另一页面，斜体字等等。例如，采取以下行内容：</p>
+
+    <h2>解析 HTML element</h2>
+    <img src="images/grumpy-cat-small.png" alt="html element" style="width:600px;"> <!-- empty element / void element-->
+
+    <h2>block elements & inline elements</h2>
+    <dl>
+        <dt>Block elements</dt>
+        <dd>块级元素在页面中以块的形式展现 —— 相对与其前面的内容它会出现在新的一行，其后的内容也会被挤到下一行展现。块级元素通常用于展示页面上结构化的内容，例如段落、列表、导航菜单、页脚等等。<strong>一个以 block 形式展现的块级元素不会被嵌套进内联元素中，但可以嵌套在其它块级元素中。</strong></dd>
+
+        <dt>Inline elements</dt>
+        <dd>内联元素通常出现在块级元素中并包裹文档内容的一小部分，而不是一整个段落或者一组内容。内联元素不会导致文本换行：它通常出现在一堆文字之间例如超链接元素 a 或者强调元素 em 和  strong。</dd>
+    </dl>
+
+    <h2>块级元素可以相互嵌套，以 p tag 做演示</h2>
+    <p>主要存在以下相关的内容：
+        <ol>
+            <li>Client:
+                <ul>
+                    <li>PC Browserss</li>
+                    <li>Mobile Browsers</li>
+                    <li>Embeded Devices's Browsers:
+                            <ul>
+                                <li>Car</li>
+                                <li>Rounter</li>
+                                <li>Watch</li>
+                                <li>Healthy Devices</li>
+                            </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Server:
+                <ul>
+                    <li>单独的主机服务</li>
+                    <li>GitHub / Google App Engine - 第三方 Cloud Services</li>
+                    <li>本地模拟环境</li>
+                </ul>
+            </li>
+        </ol>
+    </p>
+
+    <h2>布尔属性</h2>
+    <p>具有 disabled 属性的文本输入框: <input type="text" disabled></p> <!-- input 是 inline element-->
+    <p>没有 disabled 属性的文本输入框：<input type="text"></p>
+</body>
+</html>
