@@ -36,7 +36,35 @@
     <p>每一个列表项都是 block display，又由于 block display 可以嵌套，所以可以在列表项中嵌套列表。</p>
 
     <h2>一些常用的语义元素</h2>
-    
+
+    <h3>&lt;em&gt; &lt;strong&gt;</h3>
+    <p>em 是表示强调，一般用于单个词汇；strong 表示非常重要，一般用于多个词汇。</p>
+
+    <h3>&lt;i&gt; &lt;b&gt; &lt;u&gt; </h3>
+    <p>以上三个标签都是 presentational tag，并没有实际的语义作用。而 HTML5 解释的非常混乱！</p>
+    <p>以下是自己以后遵循的规则：
+        <ul>
+            <li>&lt;i&gt;: 被用来传达传统上用斜体表达的意义：外国文字，分类名称，技术术语，一种思想……</li>
+            <li>&lt;b&gt;: 被用来传达传统上用粗体表达的意义：关键字，产品名称，引导句……</li>
+            <li>&lt;u&gt;: 被用来传达传统上用下划线表达的意义：专有名词，拼写错误……</li>
+        </ul>
+    </p>
+
+    <h3>相关实例</h3>
+    <!-- scientific names -->
+    <p>The Ruby-throated Hummingbird (<i>Archilocus colubris</i>) is the most common hummingbird in Eastern North America.</p>
+
+    <!-- foreign words -->
+    <p>The menu was a sea of exotic words like <i lang="uk-latn">vatrushka</i>,<i lang="id">nasi goreng</i> and <i lang="fr">soupe à l'oignon</i>.</p>
+
+    <!-- a known misspelling -->
+    <p>Someday I'll learn how to <u>spel</u> better.</p>
+
+    <!-- Highlight keywords in a set of instructions -->
+    <ol>
+        <li><b>Slice</b> two pieces of bread off the loaf.</li>
+        <li><b>Insert</b> a tomato slice and a leaf of lettuce between the slices of bread.</li>
+    </ol>
 
 </body>
 </html>
