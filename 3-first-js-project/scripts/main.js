@@ -9,7 +9,7 @@ document.body.appendChild(list);
 
 html.onclick = function() {
   var listItem = document.createElement('li');
-  var listContent = prompt('What content do you want the list item to have?');
+  var listContent = prompt('What content do you want the list item to have?');  /* prompt() 用于提示并输入 */
   listItem.textContent = listContent;
   list.appendChild(listItem);
 
