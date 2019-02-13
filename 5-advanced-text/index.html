@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>高级 Text 技巧</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html {
+            background-color: black;
+        }
+
+        body {
+            width: 960px;
+            margin: 0 auto;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>高级 Text 技巧</h1>
+
+    <p>标记引文、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等</p>
+
+    <h2>Description List</h2>
+    <p>这种描述列表是继 ordered list, unordered list 之后的第三种列表。主要用于 “术语解释” 和 “Q&A”。</p>
+
+    <p>入学相关问题总结：
+        <dl>
+            <dt>您的孩子需要户口本吗？</dt>
+            <dd>您的孩子需要直系亲属携带户口本和出生证明文件，到学校行政楼 301 室张曼婷老师处进行的登记报道。</dd>
+            <dt>5 岁的孩子可以入学吗？</dt>
+            <dd>因为每位家长核算孩子年纪的方法不一样，这里做统一规定：2012 年 06 月以后出生的孩子，都是可以进行报道登记的。</dd>
+            <dt>5000 元够报名费用吗？</dt>
+            <dd>这位家长您好，小学是义务教育阶段，不需要报名等相关任何费用，主要要带好相关证明进行报道，就可以了。</dd>
+        </dl>
+    </p>
+
+    <h2>Quote (引用)</h2>
+    <p>blockquote, q, cite 三个 tags</p>
+
+    <h3><code>&lt;blockquote&gt;</code>> 是块引用</h3>
+    <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"><p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p></blockquote>
+    
+    <h3><code>&lt;q&gt;</code> 是行内引用</h3>
+
+    <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block Quotation Element</em>) <q cite="#">indicates that the enclosed text is an extended quotation.</q></p>
+
+    <h3><code>&lt;cite&gt;</code></h3>
+    <p>According to the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    <cite>MDN blockquote page</cite></a>:
+    </p>
+
+    <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+    <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
+    Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
+    </blockquote>
+
+    <p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+    for short quotations that don't require paragraph breaks.</q> -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+    <cite>MDN q page</cite></a>.</p>
+
+    <h2>Abbreviation (缩略语)</h2>
+    
+    <p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+
+    <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+
+    <h2>标记联系方式 (一定是编写此网页的人的联系方式)</h2>
+
+    <address>
+        <p><a href="authors/chris-mills.html">Chris Mills</a>, Manchester, The Grim North, UK</p>
+    </address>
+
+    <h2>上标和下标</h2>
+
+    <p>My birthday is on the 25<sup>th</sup> of May 2001.</p>
+    <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+    <p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+
+    <h2>展示计算机代码</h2>
+
+    <p>有大量的 tags 可以用来标记 <abbr title="Hypertext Markup Language">HTML</abbr> 代码:
+        <ul>
+            <li><code>&lt;code&gt;: 用于标记计算机通用代码。</code></li>
+            <li><code>&lt;pre&gt;:: 对保留的空格（通常是代码块）——如果您在文本中使用缩进或多余的空白，浏览器将忽略它，您将不会在呈现的页面上看到它。但是，如果您将文本包含在 <code>&lt;pre&gt;&lt;/pre&gt;</code>>标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。</code></li>
+            <li><code>&lt;var&gt;: 用于标记具体变量名。</code></li>
+            <li><code>&lt;kbd&gt;: 用于标记输入电脑的键盘（或其他类型）输入。</code></li>
+            <li><code>&lt;samp&gt;: 用于标记计算机程序的输出。</code></li>   
+        </ul>
+    </p>
+
+    <pre><code>var para = document.querySelector('p');
+
+    para.onclick = function() {
+        alert('Owww, stop poking me!');
+    }</code></pre>
+    
+    <p>You shouldn't use presentational elements like <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</p>
+    
+    <p>In the above JavaScript example, <var>para</var> represents a paragraph element.</p>
+    
+    
+    <p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+    
+    <pre>$ <kbd>ping mozilla.org</kbd>
+    <samp>PING mozilla.org (63.245.215.20): 56 data bytes
+    64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+
+    <h2>标记日期和时间</h2>
+
+    <p>世界上有许多种写日期时间的格式，但是这些不同的格式不容易被电脑识别 — 假如你想自动抓取页面上所有事件的日期并将它们插入到日历中，<code>&lt;time&gt;</code> 元素允许你附上清晰的、可被机器识别的 时间/日期来实现这种需求。
+    </p>
+
+    <time datetime="2016-01-20">20 January 2016</time>
+    <!-- Standard simple date -->
+    <time datetime="2016-01-20">20 January 2016</time>
+    <!-- Just year and month -->
+    <time datetime="2016-01">January 2016</time>
+    <!-- Just month and day -->
+    <time datetime="01-20">20 January</time>
+    <!-- Just time, hours and minutes -->
+    <time datetime="19:30">19:30</time>
+    <!-- You can do seconds and milliseconds too! -->
+    <time datetime="19:30:01.856">19:30:01.856</time>
+    <!-- Date and time -->
+    <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+    <!-- Date and time with timezone offset-->
+    <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+    <!-- Calling out a specific week number-->
+    <time datetime="2016-W04">The fourth week of 2016</time>
+
+    
+
+</body>
+</html>
